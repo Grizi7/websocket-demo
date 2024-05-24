@@ -24,7 +24,7 @@ if (socket_bind($sock, $address, $port) === false) {
 if (socket_listen($sock, 5) === false) {
     echo "socket_listen() failed: reason: " . socket_strerror(socket_last_error($sock)) . "\n";
 }
-
+ 
 do {
     if (($msgsock = socket_accept($sock)) === false) {
         echo "socket_accept() failed: reason: " . socket_strerror(socket_last_error($sock)) . "\n";
